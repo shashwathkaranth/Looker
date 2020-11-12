@@ -67,7 +67,10 @@ view: customer_cardinal1 {
     type: string
     sql: ${TABLE}."STATE" ;;
   }
-
+measure: credit {
+  type: sum
+  sql: ${credit_limit} ;;
+}
   measure: count {
     type: count
     drill_fields: [cus_name, cont_last_name, cont_first_name]
