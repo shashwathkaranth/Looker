@@ -7,3 +7,4 @@ datagroup: Cardinal_Poc_sk_default_datagroup {
 
 persist_with: Cardinal_Poc_sk_default_datagroup
 view: cus_cardinal {}
+view: customer {}
