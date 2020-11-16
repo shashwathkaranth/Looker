@@ -8,6 +8,7 @@ view: order_cardinal {
   }
 
   dimension: customer_number {
+    primary_key: yes
     type: number
     sql: ${TABLE}."CUSTOMER_NUMBER" ;;
   }
@@ -40,6 +41,11 @@ view: order_cardinal {
   measure: count {
     type: count
     drill_fields: []
+  }
+
+  dimension: Delivery_Time{
+    type: string
+    sql:  ${order_date} ;;
   }
 
 
