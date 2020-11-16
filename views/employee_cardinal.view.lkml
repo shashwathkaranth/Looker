@@ -46,4 +46,9 @@ view: employee_cardinal {
     type: count
     drill_fields: [last_name, first_name]
   }
+
+  dimension: Full_name {
+    type: string
+    sql: ${first_name}+${last_name} ;;
+  }
 }
