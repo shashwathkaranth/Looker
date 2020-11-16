@@ -43,10 +43,8 @@ view: order_cardinal {
     drill_fields: []
   }
 
-  dimension: Delivery_Time{
-    type: string
-    sql:  ${order_date} ;;
-  }
+
+
 
 
 }
