@@ -84,4 +84,8 @@ measure: credit {
   END;;
  }
 
+dimension: Full_name {
+  type: string
+  sql: ${cont_first_name} ||${cont_last_name} ;;
+}
 }
