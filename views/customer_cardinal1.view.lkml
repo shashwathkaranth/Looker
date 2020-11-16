@@ -76,10 +76,10 @@ measure: credit {
     drill_fields: [cus_name, cont_last_name, cont_first_name]
   }
 
- dimension: Credit_tyre {
+ dimension: Credit_tier {
    type: string
   sql: CASE WHEN ${credit_limit} >10000 then ' Level 1 User'
-  WHEN ${credit_limit} >20000 Then ' Level 2 User'
+  WHEN ${credit_limit} >100000 Then ' Level 2 User'
   ELSE 'Default User'
   END;;
  }
