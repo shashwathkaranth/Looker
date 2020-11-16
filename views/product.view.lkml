@@ -55,5 +55,10 @@ view: product {
     type: number
     value_format_name: usd
     sql: ${msrp}-${buy_price} ;;
+
+  }
+  measure: Quantity {
+    type: number
+    sql: ${quantity_in_stock} ;;
   }
 }
