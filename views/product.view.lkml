@@ -51,4 +51,9 @@ view: product {
     type: count
     drill_fields: [product_name]
   }
+  measure: Profit {
+    type: number
+    value_format_name: usd
+    sql: ${msrp}-${buy_price} ;;
+  }
 }
