@@ -29,3 +29,5 @@ explore: customer_cardinal1{
 }
 explore: customer {}
 explore: order_cardinal {}
+explore: product {}
+explore: order_details_cardinal {}

@@ -76,9 +76,6 @@ measure: credit {
     drill_fields: [cus_name, cont_last_name, cont_first_name]
   }
 
-dimension: Full_name {
-  type: string
-  sql: ${cont_first_name}+${cont_last_name} ;;
-}
+
 
 }
