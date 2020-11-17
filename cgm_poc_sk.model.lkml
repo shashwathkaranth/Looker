@@ -10,3 +10,10 @@ datagroup: cgm_poc_sk_default_datagroup {
 persist_with: cgm_poc_sk_default_datagroup
 
 explore: cgm_data {}
+explore: indivisual_patient_info {
+  join: cgm_created_closed {
+    type: left_outer
+    relationship: one_to_one
+    sql_on: ${indivisual_patient_info.customer_order_number}=${cgm_created_closed.customer_order_number} ;;
+  }
+}
