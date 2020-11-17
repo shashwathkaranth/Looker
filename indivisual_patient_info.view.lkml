@@ -61,4 +61,26 @@ view: indivisual_patient_info {
       doctor_state
     ]
   }
+
+
+
+  dimension: Age_InDays {
+    type: number
+    sql: DATEDIFF(day,${birth_date},GETDATE());;
+
+      }
+
+      dimension: Age {
+        type: number
+        sql: ${Age_InDays} / 365.25 ;;
+
+      }
+
+  dimension: age_tier {
+    type: tier
+    tiers: [0, 10, 20, 30, 40, 50, 60, 70, 80]
+    style: classic # the default value, could be excluded
+    sql: ${Age} ;;
+    value_format: "0"
+    }
 }
