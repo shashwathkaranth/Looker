@@ -44,14 +44,8 @@ view: order_cardinal {
   }
 
 
-dimension: Order_Processing_time{
-  type: number
-  sql: DATEDIFF(day,${order_date},${shipped_date} ;;
-}
 
-dimension: In_Time {
-  type: yesno
-  sql: ${Order_Processing_time}<=90 ;;
-}
+
+
 
 }
