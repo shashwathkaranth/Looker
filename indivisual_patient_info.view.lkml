@@ -77,11 +77,14 @@ view: indivisual_patient_info {
 
       }
 
-  dimension: age_tier {
+  dimension: Age_Group {
     type: tier
     tiers: [0, 10, 20, 30, 40, 50, 60, 70, 80]
-    style: classic # the default value, could be excluded
+    style: integer # the default value, could be excluded
     sql: ${Age} ;;
     value_format: "0"
     }
-}
+
+
+
+  }
