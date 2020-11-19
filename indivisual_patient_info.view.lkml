@@ -73,6 +73,7 @@ view: indivisual_patient_info {
       dimension: Age {
         type: number
         sql: ${Age_InDays} / 365.25 ;;
+        value_format: "0"
 
       }
 
