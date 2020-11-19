@@ -24,6 +24,23 @@ view: cgm_created_closed {
     sql: ${TABLE}."MAX(DATE_AUDIT_CLOSED)" ;;
   }
 
+
+  dimension_group: Date_Diff {
+
+    type: duration
+
+    #intervals: [day,monthyear]
+    sql_start: ${mindate_audit_created} ;;
+
+    sql_end: ${maxdate_audit_closed};;
+
+
+
+
+  }
+
+
+
   set: detail {
     fields: [customer_order_number, mindate_audit_created, maxdate_audit_closed]
   }
