@@ -4,10 +4,6 @@ view: cgm_created_closed {
       ;;
   }
 
-  measure: count {
-    type: count
-    drill_fields: [detail*]
-  }
 
   dimension: customer_order_number {
     type: string
@@ -39,6 +35,7 @@ view: cgm_created_closed {
   dimension: Date_diff1 {
     type: number
     sql: DATEDIFF(day, ${mindate_audit_created}, ${maxdate_audit_closed}) ;;
+
     }
 
   measure: date_diff {
@@ -52,8 +49,12 @@ view: cgm_created_closed {
  # }
 
 
-
-  set: detail {
-    fields: [customer_order_number, mindate_audit_created, maxdate_audit_closed]
-  }
 }
+#  measure: date_diff {
+ #   type: sum
+  #  sql: ${Date_diff1} ;;
+ # }
+
+ # set: detail {
+ #   fields: [customer_order_number, mindate_audit_created, maxdate_audit_closed]
+ # }
