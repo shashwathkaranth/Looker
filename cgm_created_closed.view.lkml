@@ -34,10 +34,22 @@ view: cgm_created_closed {
 
     sql_end: ${maxdate_audit_closed};;
 
-
-
-
   }
+
+  dimension: Date_diff1 {
+    type: number
+    sql: DATEDIFF(day, ${mindate_audit_created}, ${maxdate_audit_closed}) ;;
+    }
+
+  measure: date_diff {
+    type: sum
+    sql: ${Date_diff1} ;;
+    }
+
+ # measure: Diffrence {
+  #  type: sum
+  #  sql:
+ # }
 
 
 

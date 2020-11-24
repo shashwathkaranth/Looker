@@ -9,7 +9,13 @@ datagroup: cgm_poc_sk_default_datagroup {
 
 persist_with: cgm_poc_sk_default_datagroup
 
-explore: cgm_data {}
+explore: cgm_data {
+  join: cgm_created_closed {
+    type: left_outer
+    relationship:  many_to_one
+    sql_on: ${cgm_data.customer_order_number}=${cgm_created_closed.customer_order_number};;
+  }
+}
 explore: indivisual_patient_info {
   join: cgm_created_closed {
     type: left_outer
